@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+
 """
 Test script to verify the file structure and basic integration
 """
