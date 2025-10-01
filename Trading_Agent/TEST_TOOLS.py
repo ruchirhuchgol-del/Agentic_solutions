@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+
 """
 Test script to verify that all tools can be imported and instantiated without errors
 """
