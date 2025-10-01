@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+
 """
 Demo Script for Autonomous Trading Crew
 
