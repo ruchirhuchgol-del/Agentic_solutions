@@ -1,6 +1,6 @@
-# AutonomousTradingCrew Crew
+# AutonomousTradingCrew
 
-Welcome to the AutonomousTradingCrew Crew project. This advanced multi-agent AI system provides comprehensive stock market analysis and trading recommendations by leveraging specialized agents and custom financial tools.
+Welcome to the AutonomousTradingCrew project. This advanced multi-agent AI system provides comprehensive stock market analysis and trading recommendations by leveraging specialized agents and custom financial tools.
 
 ##  Features
 
@@ -183,7 +183,7 @@ The autonomous_trading_crew Crew is composed of multiple AI agents, each with un
 ### Custom Tools
 
 - **Financial Data Tool**: Fetches real-time and historical market data from Yahoo Finance with technical indicators
-- **Financial Sentiment Tool**: Analyzes sentiment of financial news with specialized FinBERT model
+- **Financial Sentiment Tool**: Analyzes sentiment of financial news with a specialized FinBERT model
 - **Risk Assessment Tool**: Calculates Value at Risk (VaR), Conditional VaR, and other risk metrics using ML models
 - **Predictive Analytics Tool**: Uses LSTM, ARIMA, and SARIMA models for price prediction with adaptive quality features
 
@@ -209,7 +209,7 @@ python -m pytest tests/test_tasks.py
 
 ##  Success Metrics
 
-- Complete full analysis cycle within 5 minutes for a single stock
+- Complete a full analysis cycle within 5 minutes for a single stock
 - Provide actionable trading signals with confidence levels
 - Generate comprehensive risk assessments
 - Create explainable reports for all decisions
