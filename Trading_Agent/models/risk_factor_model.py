@@ -29,8 +29,7 @@ class RiskFactorModel:
             'earnings_volatility': np.random.uniform(0.1, 0.8, n_samples)
         })
         
-        # Create risk labels (0: Low, 1: Medium, 2: High)
-        # Simple rule-based labeling for synthetic data
+        # Create risk labels (0: Low, 1: Medium, 2: High) . Simple rule-based labeling for synthetic data
         conditions = [
             (data['volatility'] < 0.2) & (data['max_drawdown'] < 0.15),
             (data['volatility'] >= 0.2) & (data['volatility'] < 0.35) & (data['max_drawdown'] < 0.25)
