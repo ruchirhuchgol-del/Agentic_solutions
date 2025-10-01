@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+
 """
 Test script to verify the integration of new models with existing tools
 """
