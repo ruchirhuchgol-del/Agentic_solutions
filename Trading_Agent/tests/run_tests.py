@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+
 """
 Test runner for the Autonomous Trading Crew
 """
