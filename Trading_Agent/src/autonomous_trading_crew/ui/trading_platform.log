@@ -1,0 +1,286 @@
+2025-09-29 17:27:13,164 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 17:27:13,199 - __main__ - ERROR - Failed to import crew module: No module named 'crewai'
+2025-09-29 17:27:44,451 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 17:27:44,457 - __main__ - ERROR - Failed to import crew module: No module named 'crewai'
+2025-09-29 17:37:01,577 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 17:37:01,579 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 17:37:01,591 - __main__ - ERROR - Failed to import crew module: No module named 'crewai'
+2025-09-29 17:37:02,598 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 17:37:02,605 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 17:37:02,611 - __main__ - ERROR - Failed to import crew module: No module named 'crewai'
+2025-09-29 17:37:27,556 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 17:37:27,557 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 17:37:27,565 - __main__ - ERROR - Failed to import crew module: No module named 'crewai'
+2025-09-29 17:43:01,173 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 17:43:01,174 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 17:43:19,732 - httpx - INFO - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-09-29 17:44:44,786 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 18:02:55,696 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 18:02:55,697 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 18:03:08,048 - httpx - INFO - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-09-29 18:04:03,248 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 18:06:44,847 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 18:06:44,849 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 18:06:44,850 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 18:06:46,472 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 18:06:46,473 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 18:06:46,475 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 18:06:54,850 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 18:06:54,851 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 18:06:54,851 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 18:07:04,170 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 18:07:04,172 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 18:07:04,173 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 18:07:06,788 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 18:07:06,788 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 18:07:06,789 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 18:07:06,844 - __main__ - INFO - Starting analysis for TSLA
+2025-09-29 18:07:06,899 - __main__ - ERROR - Analysis failed for TSLA: "FinancialDataTool" object has no field "cache"
+2025-09-29 18:07:06,920 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\ui\streamlit_2_app.py", line 115, in run_crew_analysis
+    crew_instance = crew_class()
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\crew_base.py", line 40, in __init__
+    self.map_all_task_variables()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\crew_base.py", line 240, in map_all_task_variables
+    self._map_task_variables(
+    ~~~~~~~~~~~~~~~~~~~~~~~~^
+        task_name,
+        ^^^^^^^^^^
+    ...<6 lines>...
+        output_pydantic_functions,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\crew_base.py", line 273, in _map_task_variables
+    self.tasks_config[task_name]["agent"] = agents[agent_name]()
+                                            ~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\utils.py", line 11, in memoized_func
+    cache[key] = func(*args, **kwargs)
+                 ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\crew.py", line 23, in market_intelligence_analyst
+    return create_market_intelligence_analyst(self.agents_config)
+  File "C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\agents\market_intelligence_analyst.py", line 14, in create_market_intelligence_analyst
+    FinancialDataTool(),
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\tools\financial_data_tool.py", line 23, in __init__
+    self.cache = {}  # Simple caching to reduce API calls
+    ^^^^^^^^^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\pydantic\main.py", line 997, in __setattr__
+    elif (setattr_handler := self._setattr_handler(name, value)) is not None:
+                             ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\pydantic\main.py", line 1044, in _setattr_handler
+    raise ValueError(f'"{cls.__name__}" object has no field "{name}"')
+ValueError: "FinancialDataTool" object has no field "cache"
+
+2025-09-29 18:07:19,522 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 18:07:19,523 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 18:07:19,524 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 18:07:20,084 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 18:07:20,085 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 18:07:20,087 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 18:07:23,065 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 18:07:23,066 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 18:07:23,067 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 18:07:23,659 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 18:07:23,660 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 18:07:23,661 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 18:07:25,915 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 18:07:25,916 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 18:07:25,917 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 18:07:26,491 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 18:07:26,493 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 18:07:26,495 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 18:07:28,070 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 18:07:28,070 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 18:07:28,071 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 18:07:28,649 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 18:07:28,651 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 18:07:28,652 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 18:07:38,449 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 18:07:38,449 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 18:07:38,450 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 18:07:43,105 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 18:07:43,106 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 18:07:43,107 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 20:28:31,551 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 20:28:31,595 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 20:28:31,609 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 20:28:47,646 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 20:28:47,648 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 20:28:47,649 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 20:28:54,702 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 20:28:54,704 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 20:28:54,705 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 20:28:54,761 - __main__ - INFO - Starting analysis for AAPL
+2025-09-29 20:28:54,836 - __main__ - ERROR - Analysis failed for AAPL: "FinancialDataTool" object has no field "cache"
+2025-09-29 20:28:54,852 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\ui\streamlit_2_app.py", line 115, in run_crew_analysis
+    crew_instance = crew_class()
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\crew_base.py", line 40, in __init__
+    self.map_all_task_variables()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\crew_base.py", line 240, in map_all_task_variables
+    self._map_task_variables(
+    ~~~~~~~~~~~~~~~~~~~~~~~~^
+        task_name,
+        ^^^^^^^^^^
+    ...<6 lines>...
+        output_pydantic_functions,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\crew_base.py", line 273, in _map_task_variables
+    self.tasks_config[task_name]["agent"] = agents[agent_name]()
+                                            ~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\utils.py", line 11, in memoized_func
+    cache[key] = func(*args, **kwargs)
+                 ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\crew.py", line 23, in market_intelligence_analyst
+    return create_market_intelligence_analyst(self.agents_config)
+  File "C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\agents\market_intelligence_analyst.py", line 14, in create_market_intelligence_analyst
+    FinancialDataTool(),
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\tools\financial_data_tool.py", line 23, in __init__
+    self.cache = {}  # Simple caching to reduce API calls
+    ^^^^^^^^^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\pydantic\main.py", line 997, in __setattr__
+    elif (setattr_handler := self._setattr_handler(name, value)) is not None:
+                             ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\pydantic\main.py", line 1044, in _setattr_handler
+    raise ValueError(f'"{cls.__name__}" object has no field "{name}"')
+ValueError: "FinancialDataTool" object has no field "cache"
+
+2025-09-29 20:47:10,664 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 20:47:10,672 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 20:47:10,673 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 20:47:17,079 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 20:47:17,080 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 20:47:17,082 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 20:55:06,560 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 20:55:06,566 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 20:55:06,567 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 20:55:06,602 - __main__ - INFO - Starting analysis for AAPL
+2025-09-29 20:55:06,655 - __main__ - ERROR - Analysis failed for AAPL: "FinancialDataTool" object has no field "cache"
+2025-09-29 20:55:06,673 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\ui\streamlit_2_app.py", line 115, in run_crew_analysis
+    crew_instance = crew_class()
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\crew_base.py", line 40, in __init__
+    self.map_all_task_variables()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\crew_base.py", line 240, in map_all_task_variables
+    self._map_task_variables(
+    ~~~~~~~~~~~~~~~~~~~~~~~~^
+        task_name,
+        ^^^^^^^^^^
+    ...<6 lines>...
+        output_pydantic_functions,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\crew_base.py", line 273, in _map_task_variables
+    self.tasks_config[task_name]["agent"] = agents[agent_name]()
+                                            ~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\utils.py", line 11, in memoized_func
+    cache[key] = func(*args, **kwargs)
+                 ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\crew.py", line 23, in market_intelligence_analyst
+    return create_market_intelligence_analyst(self.agents_config)
+  File "C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\agents\market_intelligence_analyst.py", line 14, in create_market_intelligence_analyst
+    FinancialDataTool(),
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\tools\financial_data_tool.py", line 23, in __init__
+    self.cache = {}  # Simple caching to reduce API calls
+    ^^^^^^^^^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\pydantic\main.py", line 997, in __setattr__
+    elif (setattr_handler := self._setattr_handler(name, value)) is not None:
+                             ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\pydantic\main.py", line 1044, in _setattr_handler
+    raise ValueError(f'"{cls.__name__}" object has no field "{name}"')
+ValueError: "FinancialDataTool" object has no field "cache"
+
+2025-09-29 20:55:12,024 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 20:55:12,025 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 20:55:12,025 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 20:55:12,487 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 20:55:12,488 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 20:55:12,488 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 20:55:13,210 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 20:55:13,211 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 20:55:13,211 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 20:55:14,288 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 20:55:14,289 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 20:55:14,289 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 20:55:14,691 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 20:55:14,691 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 20:55:14,692 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 20:55:16,178 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 20:55:16,179 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 20:55:16,179 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 20:57:16,395 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 20:57:16,397 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 20:57:16,397 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 20:57:16,415 - __main__ - INFO - Starting analysis for AAPL
+2025-09-29 20:57:16,434 - __main__ - ERROR - Analysis failed for AAPL: "FinancialDataTool" object has no field "cache"
+2025-09-29 20:57:16,444 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\ui\streamlit_2_app.py", line 115, in run_crew_analysis
+    crew_instance = crew_class()
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\crew_base.py", line 40, in __init__
+    self.map_all_task_variables()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\crew_base.py", line 240, in map_all_task_variables
+    self._map_task_variables(
+    ~~~~~~~~~~~~~~~~~~~~~~~~^
+        task_name,
+        ^^^^^^^^^^
+    ...<6 lines>...
+        output_pydantic_functions,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\crew_base.py", line 273, in _map_task_variables
+    self.tasks_config[task_name]["agent"] = agents[agent_name]()
+                                            ~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\utils.py", line 11, in memoized_func
+    cache[key] = func(*args, **kwargs)
+                 ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\crew.py", line 23, in market_intelligence_analyst
+    return create_market_intelligence_analyst(self.agents_config)
+  File "C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\agents\market_intelligence_analyst.py", line 14, in create_market_intelligence_analyst
+    FinancialDataTool(),
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\tools\financial_data_tool.py", line 23, in __init__
+    self.cache = {}  # Simple caching to reduce API calls
+    ^^^^^^^^^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\pydantic\main.py", line 997, in __setattr__
+    elif (setattr_handler := self._setattr_handler(name, value)) is not None:
+                             ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\pydantic\main.py", line 1044, in _setattr_handler
+    raise ValueError(f'"{cls.__name__}" object has no field "{name}"')
+ValueError: "FinancialDataTool" object has no field "cache"
+
+2025-09-29 21:09:58,440 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 21:09:58,445 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 21:09:58,446 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 21:10:12,529 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 21:10:12,529 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 21:10:12,530 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 21:14:04,813 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 21:14:04,817 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 21:14:04,818 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 21:14:06,578 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 21:14:06,579 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 21:14:06,579 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 21:14:08,140 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 21:14:08,141 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 21:14:08,141 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 21:14:08,437 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 21:14:08,438 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 21:14:08,438 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 21:45:50,816 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-09-29 21:45:50,817 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 21:45:50,821 - __main__ - ERROR - Failed to import crew module: No module named 'crewai'
+2025-10-01 09:24:23,829 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project
+2025-10-01 09:24:23,830 - __main__ - INFO - Added src directory to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-10-01 09:24:55,281 - httpx - INFO - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-10-01 09:26:53,608 - __main__ - ERROR - Unexpected error importing crew: can't register atexit after shutdown

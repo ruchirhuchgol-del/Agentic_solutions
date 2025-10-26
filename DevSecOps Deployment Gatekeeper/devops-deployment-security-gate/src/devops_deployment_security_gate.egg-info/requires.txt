@@ -1,0 +1,15 @@
+crewai<1.0.0,>=0.177.0
+crewai-tools<1.0.0,>=0.40.0
+pydantic<3.0.0,>=2.0.0
+pydantic-settings<3.0.0,>=2.0.0
+python-dotenv>=0.19.0
+PyYAML>=5.4.1
+requests>=2.25.1
+
+[dev]
+pytest>=7.0.0
+pytest-cov>=4.0.0
+flake8>=5.0.0
+black>=22.0.0
+mypy>=1.0.0
+pre-commit>=3.0.0

@@ -1,0 +1,18 @@
+Financial Reconciliation Report
+========================================
+
+Summary:
+  Total Transactions: 5
+  Total Invoices: 5
+  Matched Pairs: 5
+  Unmatched Transactions: 0
+  Unmatched Invoices: 0
+  Match Rate: 100.00%
+
+Matched Transactions:
+  - Transaction (2023-01-01: $100.0) matched with Invoice (2023-01-01: $100.0)
+  - Transaction (2023-01-02: $250.0) matched with Invoice (2023-01-02: $250.0)
+  - Transaction (2023-01-03: $1000.0) matched with Invoice (2023-01-03: $1000.0)
+  - Transaction (2023-01-04: $50.0) matched with Invoice (2023-01-04: $50.0)
+  - Transaction (2023-01-05: $75.0) matched with Invoice (2023-01-05: $75.0)
+

@@ -1,0 +1,96 @@
+2025-09-29 17:45:58,516 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 17:46:05,020 - httpx - INFO - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-09-29 17:46:32,711 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 17:47:14,543 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 17:47:14,545 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 17:47:20,766 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 17:47:20,767 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 17:47:20,779 - __main__ - INFO - Starting analysis for tsla
+2025-09-29 17:47:20,815 - __main__ - ERROR - Analysis failed for tsla: "FinancialDataTool" object has no field "cache"
+2025-09-29 17:47:20,830 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\ui\streamlit_app.py", line 116, in run_crew_analysis
+    crew_instance = crew_class()
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\crew_base.py", line 40, in __init__
+    self.map_all_task_variables()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\crew_base.py", line 240, in map_all_task_variables
+    self._map_task_variables(
+    ~~~~~~~~~~~~~~~~~~~~~~~~^
+        task_name,
+        ^^^^^^^^^^
+    ...<6 lines>...
+        output_pydantic_functions,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\crew_base.py", line 273, in _map_task_variables
+    self.tasks_config[task_name]["agent"] = agents[agent_name]()
+                                            ~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\utils.py", line 11, in memoized_func
+    cache[key] = func(*args, **kwargs)
+                 ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\crew.py", line 23, in market_intelligence_analyst
+    return create_market_intelligence_analyst(self.agents_config)
+  File "C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\agents\market_intelligence_analyst.py", line 14, in create_market_intelligence_analyst
+    FinancialDataTool(),
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\tools\financial_data_tool.py", line 23, in __init__
+    self.cache = {}  # Simple caching to reduce API calls
+    ^^^^^^^^^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\pydantic\main.py", line 997, in __setattr__
+    elif (setattr_handler := self._setattr_handler(name, value)) is not None:
+                             ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\pydantic\main.py", line 1044, in _setattr_handler
+    raise ValueError(f'"{cls.__name__}" object has no field "{name}"')
+ValueError: "FinancialDataTool" object has no field "cache"
+
+2025-09-29 17:47:38,416 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 17:47:38,418 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 17:47:57,091 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 17:47:57,092 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 17:50:06,481 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 17:50:13,546 - httpx - INFO - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-09-29 17:50:37,137 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 17:51:45,368 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 17:51:45,370 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 17:51:45,863 - __main__ - INFO - Added project root to path: C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src
+2025-09-29 17:51:45,863 - __main__ - INFO - Successfully imported AutonomousTradingCrewCrew
+2025-09-29 17:51:45,872 - __main__ - INFO - Starting analysis for AAPL
+2025-09-29 17:51:45,885 - __main__ - ERROR - Analysis failed for AAPL: "FinancialDataTool" object has no field "cache"
+2025-09-29 17:51:45,894 - __main__ - ERROR - Traceback (most recent call last):
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\ui\streamlit_app.py", line 116, in run_crew_analysis
+    crew_instance = crew_class()
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\crew_base.py", line 40, in __init__
+    self.map_all_task_variables()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\crew_base.py", line 240, in map_all_task_variables
+    self._map_task_variables(
+    ~~~~~~~~~~~~~~~~~~~~~~~~^
+        task_name,
+        ^^^^^^^^^^
+    ...<6 lines>...
+        output_pydantic_functions,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\crew_base.py", line 273, in _map_task_variables
+    self.tasks_config[task_name]["agent"] = agents[agent_name]()
+                                            ~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\crewai\project\utils.py", line 11, in memoized_func
+    cache[key] = func(*args, **kwargs)
+                 ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\crew.py", line 23, in market_intelligence_analyst
+    return create_market_intelligence_analyst(self.agents_config)
+  File "C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\agents\market_intelligence_analyst.py", line 14, in create_market_intelligence_analyst
+    FinancialDataTool(),
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\src\autonomous_trading_crew\tools\financial_data_tool.py", line 23, in __init__
+    self.cache = {}  # Simple caching to reduce API calls
+    ^^^^^^^^^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\pydantic\main.py", line 997, in __setattr__
+    elif (setattr_handler := self._setattr_handler(name, value)) is not None:
+                             ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\Ruchir\Desktop\crew_agents\autonomous_trading_crew_v1_crewai-project\.venv\Lib\site-packages\pydantic\main.py", line 1044, in _setattr_handler
+    raise ValueError(f'"{cls.__name__}" object has no field "{name}"')
+ValueError: "FinancialDataTool" object has no field "cache"
+

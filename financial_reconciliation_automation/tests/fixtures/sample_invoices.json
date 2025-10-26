@@ -1,0 +1,20 @@
+[
+  {
+    "date": "2023-01-01",
+    "amount": 100.00,
+    "invoice_number": "INV-001",
+    "vendor": "Office Supply Co"
+  },
+  {
+    "date": "2023-01-02",
+    "amount": 250.00,
+    "invoice_number": "INV-002",
+    "vendor": "Software Inc"
+  },
+  {
+    "date": "2023-01-03",
+    "amount": 1000.00,
+    "invoice_number": "INV-003",
+    "vendor": "Consulting Group"
+  }
+]

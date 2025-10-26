@@ -1,0 +1,250 @@
+Metadata-Version: 2.4
+Name: devops-deployment-security-gate
+Version: 1.0.0
+Summary: DevSecOps Deployment Gatekeeper - Automated Security Checks for CI/CD
+Home-page: https://github.com/example/devops-deployment-security-gate
+Author: DevSecOps Team
+Author-email: DevSecOps Team <security@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/example/devops-deployment-security-gate
+Project-URL: Documentation, https://github.com/example/devops-deployment-security-gate/blob/main/README.md
+Project-URL: Repository, https://github.com/example/devops-deployment-security-gate.git
+Project-URL: Bug Tracker, https://github.com/example/devops-deployment-security-gate/issues
+Keywords: devsecops,security,ci-cd,github,sonarqube,slack
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Quality Assurance
+Requires-Python: >=3.10,<3.14
+Description-Content-Type: text/markdown
+Requires-Dist: crewai<1.0.0,>=0.177.0
+Requires-Dist: crewai-tools<1.0.0,>=0.40.0
+Requires-Dist: pydantic<3.0.0,>=2.0.0
+Requires-Dist: pydantic-settings<3.0.0,>=2.0.0
+Requires-Dist: python-dotenv>=0.19.0
+Requires-Dist: PyYAML>=5.4.1
+Requires-Dist: requests>=2.25.1
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: flake8>=5.0.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: pre-commit>=3.0.0; extra == "dev"
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# DevSecOps Deployment Gatekeeper
+
+Welcome to the DevSecOps Deployment Gatekeeper project, powered by [crewAI](https://crewai.com). This system implements an automated security gate for CI/CD pipelines that evaluates pull requests for security vulnerabilities before allowing deployment to production.
+
+## Overview
+
+The DevSecOps Deployment Gatekeeper is an AI-powered system that automates security checks in your deployment pipeline. It integrates with GitHub, SonarQube, and Slack to provide real-time security assessment and decision-making capabilities.
+
+## Architecture
+
+The system follows a multi-agent architecture with four specialized agents:
+
+1. **PR Metadata Extraction Specialist** - Extracts and validates pull request metadata from GitHub
+2. **SonarQube Security Scanner** - Executes comprehensive security analysis using SonarQube
+3. **Security Policy Decision Engine** - Evaluates security scan results against organizational policies
+4. **Security Alert Notification Manager** - Sends structured security alerts to Slack channels
+
+## Workflow
+
+```mermaid
+sequenceDiagram
+    participant Dev as Developer
+    participant GH as GitHub
+    participant DG as Deployment Gatekeeper
+    participant SQ as SonarQube
+    participant SL as Slack
+
+    Dev->>GH: Create/Update Pull Request
+    GH-->>DG: Trigger Webhook (PR Payload)
+    DG->>SQ: Run Analysis (Branch Name)
+    loop Poll Every 10s
+        SQ-->>DG: Check Task Status
+    end
+    DG->>SQ: Get JSON Report
+    DG->>DG: Parse + Evaluate Vulnerabilities
+    alt Critical Vulnerabilities Found
+        DG->>GH: Set PR Status = "failure"
+        DG->>GH: Comment "Blocked by security scan"
+        DG->>SL: Send Message "PR Blocked"
+    else No Critical Vulnerabilities
+        DG->>GH: Set PR Status = "success"
+        DG->>SL: Send Message "PR Passed"
+    end
+```
+
+## Installation
+
+Ensure you have Python >=3.10 <3.14 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+
+First, if you haven't already, install uv:
+
+```bash
+pip install uv
+```
+
+Next, navigate to your project directory and install the dependencies:
+
+```bash
+crewai install
+```
+
+Or alternatively:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Configuration
+
+1. Copy the `.env.example` file to `.env`:
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Modify the `.env` file to add your actual API keys and configuration values:
+   - `OPENAI_API_KEY` - Your OpenAI API key
+   - `GITHUB_TOKEN` - Your GitHub personal access token
+   - `SONARQUBE_URL` - Your SonarQube instance URL
+   - `SONARQUBE_TOKEN` - Your SonarQube authentication token
+   - `SLACK_BOT_TOKEN` - Your Slack bot token
+
+### Environment Variables
+
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `OPENAI_API_KEY` | OpenAI API key for AI agents | Yes |
+| `GITHUB_TOKEN` | GitHub personal access token | Yes |
+| `SONARQUBE_URL` | SonarQube server URL | Yes |
+| `SONARQUBE_TOKEN` | SonarQube authentication token | Yes |
+| `SLACK_BOT_TOKEN` | Slack bot token for notifications | Yes |
+| `SECRET_KEY` | Secret key for internal encryption | No (default provided) |
+| `GITHUB_WEBHOOK_SECRET` | GitHub webhook secret for validation | No (default provided) |
+
+## Running the Project
+
+To run the security gate on a pull request:
+
+```bash
+python -m devops_deployment_security_gate run --pr-number 123 --repository myorg/myrepo --branch feature-branch
+```
+
+### Available Commands
+
+- `run` - Run the security gate workflow on a pull request
+- `train` - Train the crew with custom data
+- `replay` - Replay a specific task execution
+- `test` - Test the system with sample data
+- `config validate` - Validate configuration
+
+### Command Examples
+
+```bash
+# Run security gate on PR #123
+python -m devops_deployment_security_gate run --pr-number 123 --repository myorg/myrepo --branch feature-branch
+
+# Train with custom data
+python -m devops_deployment_security_gate train --iterations 10 --data-path ./training_data/
+
+# Replay a specific task
+python -m devops_deployment_security_gate replay --task-id task_12345
+
+# Test with sample data
+python -m devops_deployment_security_gate test --iterations 5 --model gpt-4
+
+# Validate configuration
+python -m devops_deployment_security_gate config validate
+```
+
+## Project Structure
+
+```
+devops-deployment-security-gate/
+├── src/
+│   └── devops_deployment_security_gate/
+│       ├── agents/              # AI agents with specialized roles
+│       ├── config/              # Configuration files (YAML, settings)
+│       ├── core/                # Core crew implementation
+│       ├── integrations/        # Third-party service integrations
+│       ├── models/              # Data models and schemas
+│       ├── tasks/               # Task definitions
+│       ├── tools/               # Custom tools for agents
+│       ├── utils/               # Utility functions
+│       └── main.py             # Main entry point
+├── tests/                      # Unit and integration tests
+├── requirements.txt            # Python dependencies
+├── pyproject.toml             # Project metadata and build configuration
+├── .env.example               # Example environment variables
+└── README.md                  # This file
+```
+
+## Testing
+
+The project includes comprehensive unit tests for all components. To run the tests:
+
+```bash
+cd devops-deployment-security-gate
+python -m pytest tests/
+```
+
+Or run the test runner script:
+
+```bash
+cd devops-deployment-security-gate
+python tests/run_tests.py
+```
+
+## Customizing
+
+- Modify `src/devops_deployment_security_gate/config/agents.yaml` to define your agents
+- Modify `src/devops_deployment_security_gate/config/tasks.yaml` to define your tasks
+- Modify `src/devops_deployment_security_gate/core/crew.py` to add your own logic, tools and specific args
+- Modify `src/devops_deployment_security_gate/main.py` to add custom inputs for your agents and tasks
+
+## Security Considerations
+
+- Keep your API keys and tokens secure
+- Use strong authentication for all integrated services
+- Regularly rotate your authentication tokens
+- Monitor the logs for suspicious activity
+- Ensure your SonarQube instance is properly secured
+
+## Troubleshooting
+
+### Common Issues
+
+1. **API Authentication Errors**
+   - Verify all environment variables are correctly set
+   - Check that your tokens have the required permissions
+   - Ensure your SonarQube URL is correct
+
+2. **GitHub Integration Issues**
+   - Confirm your GitHub token has repo access
+   - Check that the repository name format is correct (owner/repo)
+   - Verify webhook configuration if using automated triggers
+
+3. **Slack Notification Failures**
+   - Ensure your Slack bot token is correct
+   - Verify the bot has access to the specified channels
+   - Check that the channel names are correctly formatted
+
+### Getting Help
+
+For support, questions, or feedback regarding the DevSecOps Deployment Gatekeeper or crewAI:
+- Visit our [documentation](https://docs.crewai.com)
+- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
+- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
+- [Chat with our docs](https://chatg.pt/DWjSBZn)

@@ -1,0 +1,60 @@
+---
+analyze_github_profile:
+  description: >
+    Analyze the GitHub profile for {github_handle} targeting {target_roles}.
+    
+    Perform a comprehensive audit based on:
+    - Stars growth, contribution cadence, and topical alignment
+    - README clarity and repository health metrics
+    - Current pinned repositories and their recruiter appeal
+    - Profile completeness and discoverability factors
+    
+    Use {repos_scope} rules for repository analysis and apply {limits} constraints.
+  expected_output: >
+    A detailed analysis report including:
+    - Profile completeness score and missing elements
+    - Repository quality metrics and star distribution
+    - Contribution patterns and activity cadence
+    - SEO and discoverability assessment
+  agent: github_automation_agent
+
+generate_optimizations:
+  description: >
+    Generate comprehensive optimization recommendations for {github_handle} based on
+    the profile analysis.
+    
+    Focus on improvements that will enhance recruiter visibility, including:
+    - README quality improvements for profile and repositories
+    - Pinned repository curation with clear descriptions
+    - Profile completeness and professional branding
+    - Contribution rhythm coaching
+    - CI/CD signals and automation badges
+    
+    Prioritize recommendations based on impact and effort required.
+  expected_output: >
+    A prioritized list of optimization recommendations including:
+    - High-impact quick wins
+    - Medium-effort improvements with significant impact
+    - Long-term strategic enhancements
+    - Estimated timeline for implementation
+  agent: optimization_specialist_agent
+
+implement_optimizations:
+  description: >
+    Implement the approved optimizations for {github_handle} in {dry_run} mode.
+    
+    Execute the following actions:
+    - Update profile elements (bio, location, etc.)
+    - Improve repository README files
+    - Curate pinned repositories
+    - Set up CI/CD badges and signals
+    - Apply all changes with safety checks and diff previews
+    
+    Document all changes with before/after comparisons.
+  expected_output: >
+    Implementation report including:
+    - List of applied changes with diffs
+    - Safety check results
+    - Remaining recommendations for manual implementation
+    - Success metrics and next steps
+  agent: github_automation_agent

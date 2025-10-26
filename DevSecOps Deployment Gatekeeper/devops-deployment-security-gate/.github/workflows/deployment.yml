@@ -1,0 +1,79 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Run tests
+      run: |
+        cd devops-deployment-security-gate
+        python -m pytest tests/ -v
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONARQUBE_URL: ${{ secrets.SONARQUBE_URL }}
+        SONARQUBE_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+    
+    - name: Build package
+      run: |
+        cd devops-deployment-security-gate
+        python -m pip install build
+        python -m build
+    
+    - name: Publish to PyPI
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        user: __token__
+        password: ${{ secrets.PYPI_API_TOKEN }}
+
+  deploy-to-cloud:
+    runs-on: ubuntu-latest
+    needs: build-and-push
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Deploy to AWS
+      run: |
+        echo "Deploying to AWS..."
+        # Add deployment steps here
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_DEFAULT_REGION: us-east-1
+    
+    - name: Deploy to Azure
+      run: |
+        echo "Deploying to Azure..."
+        # Add deployment steps here
+      env:
+        AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+        AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+        AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+    
+    - name: Deploy to GCP
+      run: |
+        echo "Deploying to GCP..."
+        # Add deployment steps here
+      env:
+        GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+        GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}

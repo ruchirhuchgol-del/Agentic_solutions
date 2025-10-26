@@ -1,0 +1,31 @@
+[project]
+name = "financial_reconciliation_automation"
+version = "0.1.0"
+description = "financial_reconciliation_automation using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.177.0",
+    "streamlit>=1.29.0",
+    "plotly>=5.18.0",
+    "pandas>=1.5.0",
+    "python-dotenv>=0.19.0",
+    "langchain>=0.1.0",
+    "langchain-openai>=0.1.0",
+    "langchain-community>=0.1.0"
+]
+
+[project.scripts]
+financial_reconciliation_automation = "financial_reconciliation_automation.main:run"
+run_crew = "financial_reconciliation_automation.main:run"
+train = "financial_reconciliation_automation.main:train"
+replay = "financial_reconciliation_automation.main:replay"
+test = "financial_reconciliation_automation.main:test"
+ui = "financial_reconciliation_automation.main:run_ui"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

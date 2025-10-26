@@ -1,0 +1,51 @@
+---
+validate_data_quality_and_integrity:
+  description: >
+    Validate the integrity of financial transaction data and invoice data from {data_source} and {invoice_source}.
+    Check for missing or corrupted records, detect duplicate transactions, and ensure data meets quality standards
+    before processing. Identify any data quality issues that could affect reconciliation accuracy.
+  expected_output: >
+    A detailed validation report listing any data quality issues found, including missing records, 
+    corrupted data, and duplicate transactions. Provide recommendations for addressing identified issues.
+  agent: data_quality_validator
+
+fetch_financial_data:
+  description: >
+    Collect and organize financial transaction data from {data_source} and invoice data from {invoice_source}.
+    Ensure all records are properly formatted and ready for reconciliation analysis. Extract relevant fields
+    and structure the data in a way that facilitates easy comparison and matching.
+  expected_output: >
+    Two structured datasets: one containing transaction records and another containing invoice records.
+    Each dataset should be properly formatted with consistent field names and data types. 
+    Include metadata about the data sources and any transformations applied.
+  agent: financial_data_collector
+  context: [validate_data_quality_and_integrity]
+
+match_transactions_and_invoices:
+  description: >
+    Analyze financial transactions and invoices to identify matches based on amount, date, and other criteria.
+    Flag any unmatched transactions and calculate discrepancy amounts with precision. Apply business rules
+    for handling special cases and timing variations within the {date_tolerance} day window.
+  expected_output: >
+    A comprehensive matching report that includes:
+    1. List of matched transactions with confidence scores
+    2. List of unmatched transactions with detailed reasons
+    3. Summary of discrepancy amounts and patterns
+    4. Recommendations for resolving unmatched items
+  agent: transaction_matching_specialist
+  context: [fetch_financial_data]
+
+generate_reconciliation_report_and_alerts:
+  description: >
+    Document all transaction matches and discrepancies in {reporting_system}. Create comprehensive reports
+    with color-coded flags for critical issues exceeding {alert_threshold}. Generate alerts for urgent
+    discrepancies that require immediate attention. Provide actionable insights for process improvement.
+  expected_output: >
+    A complete reconciliation report including:
+    1. Executive summary with key metrics
+    2. Detailed analysis of matches and discrepancies
+    3. Color-coded alerts for critical issues
+    4. Trend analysis and recommendations
+    5. Compliance considerations
+  agent: discrepancy_reporter
+  context: [match_transactions_and_invoices]

@@ -1,0 +1,3 @@
+[console_scripts]
+devsecops-gate = devops_deployment_security_gate.main:main
+security-gate = devops_deployment_security_gate.core.orchestrator:main

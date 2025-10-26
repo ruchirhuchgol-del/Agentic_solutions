@@ -1,0 +1,94 @@
+{
+  "matched": [
+    {
+      "transaction": {
+        "date": "2023-01-01",
+        "amount": 100.0,
+        "description": "Office supplies",
+        "account": "Expense"
+      },
+      "invoice": {
+        "date": "2023-01-01",
+        "amount": 100.0,
+        "invoice_number": "INV-001",
+        "vendor": "Office Supply Co"
+      },
+      "match_type": "amount_match",
+      "confidence": 0.9
+    },
+    {
+      "transaction": {
+        "date": "2023-01-02",
+        "amount": 250.0,
+        "description": "Software subscription",
+        "account": "Expense"
+      },
+      "invoice": {
+        "date": "2023-01-02",
+        "amount": 250.0,
+        "invoice_number": "INV-002",
+        "vendor": "Software Inc"
+      },
+      "match_type": "amount_match",
+      "confidence": 0.9
+    },
+    {
+      "transaction": {
+        "date": "2023-01-03",
+        "amount": 1000.0,
+        "description": "Consulting services",
+        "account": "Expense"
+      },
+      "invoice": {
+        "date": "2023-01-03",
+        "amount": 1000.0,
+        "invoice_number": "INV-003",
+        "vendor": "Consulting Group"
+      },
+      "match_type": "amount_match",
+      "confidence": 0.9
+    },
+    {
+      "transaction": {
+        "date": "2023-01-04",
+        "amount": 50.0,
+        "description": "Team lunch",
+        "account": "Expense"
+      },
+      "invoice": {
+        "date": "2023-01-04",
+        "amount": 50.0,
+        "invoice_number": "INV-004",
+        "vendor": "Restaurant Co"
+      },
+      "match_type": "amount_match",
+      "confidence": 0.9
+    },
+    {
+      "transaction": {
+        "date": "2023-01-05",
+        "amount": 75.0,
+        "description": "Travel expenses",
+        "account": "Expense"
+      },
+      "invoice": {
+        "date": "2023-01-05",
+        "amount": 75.0,
+        "invoice_number": "INV-005",
+        "vendor": "Travel Agency"
+      },
+      "match_type": "amount_match",
+      "confidence": 0.9
+    }
+  ],
+  "unmatched_transactions": [],
+  "unmatched_invoices": [],
+  "summary": {
+    "total_transactions": 5,
+    "total_invoices": 5,
+    "matched_pairs": 5,
+    "unmatched_transactions_count": 0,
+    "unmatched_invoices_count": 0,
+    "match_rate": 1.0
+  }
+}

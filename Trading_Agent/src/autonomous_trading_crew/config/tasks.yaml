@@ -1,0 +1,165 @@
+---
+multi_modal_signal_synthesis:
+  description: |-
+    CRITICAL: Conduct comprehensive financial analysis for {stock_symbol} by gathering data from multiple sources. Execute the following steps in order:
+
+    1. MARKET DATA ANALYSIS: Search for current stock price, volume, market cap, and key financial metrics for {stock_symbol}
+    2. NEWS SENTIMENT ANALYSIS: Use news search to find recent financial news articles (last 7 days) about {stock_symbol} and analyze sentiment
+    3. ANALYST RESEARCH: Search for analyst reports, price targets, and recommendations for {stock_symbol}
+    4. TECHNICAL INDICATORS: Look for technical analysis information including RSI, moving averages, support/resistance levels
+    5. SECTOR/MARKET CONTEXT: Analyze broader market conditions and sector performance that may impact {stock_symbol}
+
+    VALIDATION: Your output must contain specific data points: current stock price, recent percentage change, at least 3 recent news headlines with dates, analyst consensus rating, and technical indicator values. Do NOT proceed to signal generation without gathering this actual market data.
+  expected_output: |-
+    STRUCTURED JSON OUTPUT REQUIRED:
+    {
+      "stock_symbol": "{stock_symbol}",
+      "current_price": "$XXX.XX",
+      "price_change_24h": "+X.X%",
+      "market_cap": "$XXB",
+      "recent_news": [
+        {"headline": "News title", "date": "YYYY-MM-DD", "sentiment": "positive/negative/neutral", "source": "Source name"},
+        {"headline": "News title", "date": "YYYY-MM-DD", "sentiment": "positive/negative/neutral", "source": "Source name"},
+        {"headline": "News title", "date": "YYYY-MM-DD", "sentiment": "positive/negative/neutral", "source": "Source name"}
+      ],
+      "analyst_data": {
+        "consensus_rating": "Buy/Hold/Sell",
+        "average_price_target": "$XXX.XX",
+        "analyst_count": X
+      },
+      "technical_indicators": {
+        "rsi": XX.X,
+        "moving_avg_50": "$XXX.XX",
+        "support_level": "$XXX.XX",
+        "resistance_level": "$XXX.XX"
+      },
+      "trading_signal": {
+        "signal_type": "BUY/SELL/HOLD",
+        "signal_strength": 0.XX,
+        "confidence_level": "HIGH/MEDIUM/LOW",
+        "key_catalysts": ["catalyst1", "catalyst2", "catalyst3"]
+      }
+    }
+  agent: market_intelligence_analyst
+risk_assessment_guardrail_check:
+  description: |-
+    CRITICAL: Analyze the trading signal from the Market Intelligence Analyst and apply comprehensive risk management protocols. Execute these validation steps:
+
+    1. SIGNAL VALIDATION: Review the provided trading signal data for {stock_symbol} from the previous analysis
+    2. VOLATILITY ASSESSMENT: Search for current VIX levels and {stock_symbol}'s historical volatility (30-day)
+    3. POSITION SIZING: Calculate appropriate position size based on portfolio risk (maximum 5% allocation for single stock)
+    4. SECTOR RISK: Research sector concentration risk and correlation with existing holdings
+    5. MARKET CONDITIONS: Analyze broader market sentiment and economic indicators that could impact the trade
+    6. STOP-LOSS LEVELS: Determine appropriate stop-loss and take-profit levels based on technical support/resistance
+
+    VALIDATION REQUIREMENTS: Must access and validate the actual trading signal from previous task. If signal strength < 0.6 or confidence = LOW, automatically recommend REJECT or ADJUST.
+  expected_output: |-
+    STRUCTURED JSON OUTPUT REQUIRED:
+    {
+      "risk_assessment": {
+        "action": "APPROVE/ADJUST/REJECT",
+        "reasoning": "Detailed explanation of risk decision",
+        "original_signal_strength": 0.XX,
+        "risk_adjusted_strength": 0.XX
+      },
+      "position_sizing": {
+        "max_position_size": "X% of portfolio",
+        "recommended_shares": XXX,
+        "dollar_amount": "$X,XXX",
+        "risk_per_trade": "$XXX"
+      },
+      "risk_metrics": {
+        "current_vix": XX.X,
+        "stock_volatility_30d": XX.X,
+        "beta": X.X,
+        "sharpe_ratio": X.X
+      },
+      "stop_loss_strategy": {
+        "stop_loss_price": "$XXX.XX",
+        "take_profit_price": "$XXX.XX",
+        "risk_reward_ratio": "X:X"
+      },
+      "market_conditions": {
+        "overall_market_sentiment": "bullish/bearish/neutral",
+        "sector_performance": "+X.X%",
+        "economic_indicators": ["indicator1", "indicator2"]
+      },
+      "final_recommendation": {
+        "approved": true/false,
+        "adjusted_signal_type": "BUY/SELL/HOLD",
+        "confidence_level": "HIGH/MEDIUM/LOW",
+        "risk_warnings": ["warning1", "warning2"]
+      }
+    }
+  agent: risk_management_officer
+  context:
+  - multi_modal_signal_synthesis
+tax_optimized_execution_plan:
+  description: "CRITICAL: Create a detailed, executable trading plan for {stock_symbol}
+    based on the approved risk assessment. Only proceed if previous risk assessment
+    shows \"approved\": true. Execute these steps:\n\n1. ORDER STRATEGY: Determine
+    optimal order type (market, limit, stop-limit) based on current market conditions
+    and volatility\n2. EXECUTION TIMING: Research optimal execution windows considering
+    volume patterns and bid-ask spreads  \n3. TAX OPTIMIZATION: Search for tax-loss
+    harvesting opportunities and wash sale rule compliance strategies\n4. BROKERAGE
+    SELECTION: Recommend execution platform considering fees, execution quality, and
+    available order types\n5. CONTINGENCY PLANNING: Develop backup execution strategies
+    if primary plan fails\n6. REPORTING REQUIREMENTS: Specify trade documentation
+    and compliance tracking needs\n\nVALIDATION: Must reference specific data from
+    risk assessment task. If risk assessment was REJECT, output should recommend NO
+    EXECUTION with detailed reasoning."
+  expected_output: "STRUCTURED JSON OUTPUT REQUIRED:\n{\n  \"execution_plan\": {\n
+    \   \"proceed_with_execution\": true/false,\n    \"execution_decision_basis\":
+    \"Reference to risk assessment approval/rejection\",\n    \"recommended_order_type\":
+    \"market/limit/stop-limit\",\n    \"target_execution_price\": \"$XXX.XX\",\n    \"order_quantity\":
+    XXX,\n    \"total_investment\": \"$X,XXX\"\n  },\n  \"timing_strategy\": {\n    \"optimal_execution_window\":
+    \"market_open/mid_day/market_close\",\n    \"expected_execution_time\": \"HH:MM
+    EST\",\n    \"volume_analysis\": \"high/medium/low expected volume\",\n    \"bid_ask_spread\":
+    \"$X.XX\"\n  },\n  \"tax_optimization\": {\n    \"tax_loss_harvesting_opportunities\":
+    [\"stock1\", \"stock2\"],\n    \"estimated_tax_savings\": \"$XXX\",\n    \"wash_sale_compliance\":
+    \"compliant/violation_risk\",\n    \"holding_period_strategy\": \"short_term/long_term\"\n
+    \ },\n  \"execution_instructions\": {\n    \"step_1\": \"Specific brokerage action\",\n
+    \   \"step_2\": \"Specific brokerage action\", \n    \"step_3\": \"Specific brokerage
+    action\",\n    \"step_4\": \"Specific brokerage action\",\n    \"step_5\": \"Documentation
+    and tracking\"\n  },\n  \"contingency_plans\": {\n    \"if_market_gaps\": \"Action
+    plan\",\n    \"if_high_volatility\": \"Action plan\",\n    \"if_news_breaks\":
+    \"Action plan\"\n  },\n  \"post_execution\": {\n    \"monitoring_requirements\":
+    [\"requirement1\", \"requirement2\"],\n    \"reporting_schedule\": \"daily/weekly/monthly\",\n
+    \   \"exit_strategy_review\": \"X days\"\n  }\n}"
+  agent: trade_execution_specialist
+  context:
+  - risk_assessment_guardrail_check
+decision_explanation_report:
+  description: "CRITICAL: Synthesize all previous analyses into a comprehensive, executive-level
+    trading decision report for {stock_symbol}. You MUST reference and incorporate
+    the actual outputs from all three previous tasks. Execute the following:\n\n1.
+    DATA SYNTHESIS: Extract key data points from Market Intelligence Analyst's signal
+    analysis\n2. RISK INTEGRATION: Incorporate Risk Management Officer's assessment
+    and any adjustments made\n3. EXECUTION SUMMARY: Reference Trade Execution Specialist's
+    plan and recommendations  \n4. DECISION RATIONALE: Provide clear logic chain from
+    signal → risk assessment → execution plan\n5. STAKEHOLDER COMMUNICATION: Translate
+    technical analysis into business language\n6. AUDIT TRAIL: Ensure full transparency
+    and traceability of decision process\n\nVALIDATION: Report must contain specific
+    data from ALL previous tasks. If any previous task failed or recommended rejection,
+    clearly state this and explain implications."
+  expected_output: "COMPREHENSIVE MARKDOWN REPORT with the following structure:\n\n#
+    {stock_symbol} Trading Decision Report - [Current Date]\n\n## Executive Summary\n-
+    **Final Recommendation**: BUY/SELL/HOLD/NO ACTION\n- **Investment Amount**: $X,XXX\n-
+    **Expected Timeline**: X days/weeks\n- **Risk Level**: HIGH/MEDIUM/LOW\n- **Key
+    Decision Drivers**: [Top 3 factors]\n\n## Market Intelligence Analysis\n[Synthesize
+    actual data from Market Intelligence Analyst including current price, news sentiment,
+    analyst ratings]\n\n## Risk Assessment Results  \n[Incorporate actual risk metrics
+    and decisions from Risk Management Officer]\n\n## Execution Plan Overview\n[Reference
+    actual execution strategy from Trade Execution Specialist]\n\n## Decision Rationale\n[Clear
+    logic connecting signal → risk → execution with specific data points]\n\n## Key
+    Risks and Mitigation Strategies\n[Specific risks identified and how they're addressed]\n\n##
+    Tax and Regulatory Considerations\n[Actual tax optimization strategies and compliance
+    requirements]\n\n## Monitoring and Exit Strategy\n[Specific metrics to track and
+    exit conditions]\n\n## Appendix: Supporting Data\n[Include key data points from
+    all previous analyses for audit purposes]\n\n**Report Generated**: [Timestamp]\n**Automation
+    Confidence**: HIGH/MEDIUM/LOW based on data quality from previous tasks"
+  agent: explainability_reporter
+  context:
+  - multi_modal_signal_synthesis
+  - risk_assessment_guardrail_check
+  - tax_optimized_execution_plan

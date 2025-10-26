@@ -1,0 +1,6 @@
+date,amount,invoice_number,vendor
+2023-01-01,100.00,INV-001,Office Supply Co
+2023-01-02,250.00,INV-002,Software Inc
+2023-01-03,1000.00,INV-003,Consulting Group
+2023-01-04,50.00,INV-004,Restaurant Co
+2023-01-05,75.00,INV-005,Travel Agency

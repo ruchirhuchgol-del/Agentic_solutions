@@ -1,0 +1,43 @@
+[project]
+name = "github_profile_optimizer"
+version = "0.1.0"
+description = "Enterprise-grade GitHub profile optimizer using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.177.0,<1.0.0",
+    "pygithub>=1.55",
+    "pydantic>=2.0.0",
+    "redis>=4.0.0",
+    "flask>=2.0.0",
+    "streamlit>=1.28.0",
+    "plotly>=5.15.0",
+    "pandas>=2.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "pytest-asyncio>=0.20.0",
+    "flake8>=5.0.0",
+    "mypy>=1.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "pre-commit>=3.0.0"
+]
+
+[project.scripts]
+github_profile_optimizer = "github_profile_optimizer.main:run"
+run_crew = "github_profile_optimizer.main:run"
+train = "github_profile_optimizer.main:train"
+replay = "github_profile_optimizer.main:replay"
+test = "github_profile_optimizer.main:test"
+dashboard = "github_profile_optimizer.ui.dashboard:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
