@@ -1,0 +1,93 @@
+hypothesis-generation-agent/
+├── README.md                          # Project overview and setup instructions
+├── requirements.txt                   # Python dependencies
+├── pyproject.toml                     # Project metadata and build configuration
+├── .env.example                       # Environment variables template
+├── .gitignore                         # Git ignore file
+├── Makefile                           # Common commands for development
+├── Dockerfile                         # Container configuration (for future deployment)
+├── docker-compose.yml                 # Local development environment
+│
+├── src/                               # Source code directory
+│   └── hypothesis_generation_agent/
+│       ├── __init__.py
+│       ├── main.py                    # Entry point for running the agent
+│       ├── crew.py                    # CrewAI crew definition
+│       ├── cli.py                     # Command-line interface
+│       │
+│       ├── agents/                    # Agent implementations
+│       │   ├── __init__.py
+│       │   ├── base_agent.py          # Base class for all agents
+│       │   ├── context_extractor.py
+│       │   ├── hypothesis_generator.py
+│       │   ├── test_recommender.py
+│       │   ├── reviewer.py
+│       │   ├── statistical_validator.py
+│       │   ├── hypothesis_refiner.py
+│       │   └── hypothesis_librarian.py
+│       │
+│       ├── tasks/                     # Task implementations
+│       │   ├── __init__.py
+│       │   ├── base_task.py           # Base class for all tasks
+│       │   ├── extract_context.py
+│       │   ├── generate_hypotheses.py
+│       │   ├── recommend_test.py
+│       │   ├── validate_consistency.py
+│       │   ├── review_output.py
+│       │   ├── store_hypothesis.py
+│       │   └── refine_hypothesis.py
+│       │
+│       ├── tools/                     # Custom tools for agents
+│       │   ├── __init__.py
+│       │   ├── file_tools.py          # File reading/writing tools
+│       │   ├── rag_tools.py           # RAG integration tools (future)
+│       │   ├── validation_tools.py    # Statistical validation tools
+│       │   └── library_tools.py       # Hypothesis library management tools
+│       │
+│       ├── utils/                     # Utility functions
+│       │   ├── __init__.py
+│       │   ├── llm.py                 # LLM configuration and utilities
+│       │   ├── formatters.py          # Output formatting utilities
+│       │   └── validators.py          # Data validation utilities
+│       │
+│       └── config/                    # Configuration files
+│           ├── __init__.py
+│           ├── agents.yaml            # Agent configurations
+│           ├── tasks.yaml             # Task configurations
+│           ├── llm_config.yaml        # LLM model configurations
+│           └── logging_config.yaml    # Logging configuration
+│
+├── knowledge_base/                    # RAG knowledge base (future)
+│   ├── statistical_guides/
+│   ├── hypothesis_examples/
+│   ├── test_selection_guides/
+│   └── company_standards/
+│
+├── data/                              # Data files
+│   ├── inputs/                        # Sample input files
+│   ├── outputs/                       # Sample output files
+│   └── hypothesis_library/            # Stored hypotheses (future)
+│
+├── tests/                             # Test suite
+│   ├── __init__.py
+│   ├── conftest.py                    # Pytest configuration
+│   ├── unit/                          # Unit tests
+│   │   ├── test_agents/
+│   │   ├── test_tasks/
+│   │   └── test_tools/
+│   ├── integration/                   # Integration tests
+│   │   ├── test_crew.py
+│   │   └── test_workflows.py
+│   └── fixtures/                      # Test fixtures and sample data
+│
+├── docs/                              # Documentation
+│   ├── index.md                       # Documentation home
+│   ├── user_guide/                    # User documentation
+│   ├── developer_guide/               # Developer documentation
+│   ├── api_reference/                 # API reference
+│   └── examples/                      # Usage examples
+│
+└── scripts/                           # Utility scripts
+    ├── setup_dev_env.sh               # Development environment setup
+    ├── run_tests.sh                   # Test runner script
+    └── build_docs.sh                  # Documentation build script

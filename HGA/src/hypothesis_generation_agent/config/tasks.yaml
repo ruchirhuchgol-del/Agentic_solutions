@@ -1,0 +1,184 @@
+---
+extract_context_and_variables:
+  description: "Parse the business problem \"{business_problem}\" and extract key
+    statistical components. If the input contains ambiguities or missing critical
+    information, formulate specific clarifying questions for the user.\n\nExtract
+    the following components:\n1. Comparison groups (e.g., Control vs Treatment, Before
+    vs After, Group A vs Group B)\n2. Primary metric of interest and its characteristics
+    \ \n3. Data type classification (continuous, categorical, binary)\n4. Relationship
+    between groups (independent or paired/dependent)\n5. Number of groups being compared\n6.
+    Any additional context relevant for statistical analysis\n\n**Important**: If
+    any of these elements are ambiguous, unclear, or missing, include a \"clarification_needed\"
+    field with specific questions to resolve the ambiguity. Examples:\n- If groups
+    are unclear: \"What are the specific groups you want to compare?\"\n- If metric
+    is vague: \"What specific metric will you measure? (e.g., conversion rate, average
+    revenue, user satisfaction score)\"\n- If relationship is unclear: \"Are these
+    the same users measured before/after (paired) or different groups of users (independent)?\"\n\nProvide
+    the output in a structured JSON format with clear field names and values."
+  expected_output: "A structured JSON object containing:\n- groups: List of comparison
+    groups identified (or \"UNCLEAR\" if ambiguous)\n- metric: Primary metric being
+    measured (or \"NEEDS_CLARIFICATION\" if vague) \n- metric_type: Classification
+    as continuous, categorical, or binary (or \"UNKNOWN\" if unclear)\n- group_relationship:
+    Whether groups are independent or paired/dependent (or \"UNCLEAR\" if ambiguous)\n-
+    number_of_groups: Count of groups being compared\n- additional_context: Any relevant
+    experimental design details or constraints\n- clarification_needed: List of specific
+    questions if input is ambiguous (empty if clear)\n- confidence_level: How confident
+    you are in the extraction (LOW/MEDIUM/HIGH)"
+  agent: context_extractor
+generate_statistical_hypotheses:
+  description: "Based on the extracted context and variables from the business problem
+    \"{business_problem}\", formulate comprehensive statistical hypotheses. **First,
+    read any relevant statistical documentation files (e.g., company_statistical_standards.md,
+    hypothesis_examples.txt) to ensure consistency with established practices.**\n\nUse
+    your File Read Tool to consult:\n- Statistical notation standards and guidelines\n-
+    Examples of similar hypothesis formulations from past projects\n- Company-specific
+    preferences for hypothesis structure\n\nFormulate the following:\n1. Null Hypothesis
+    (H₀) in both mathematical notation and plain English\n2. Three versions of Alternative
+    Hypothesis (H₁):\n   - Two-tailed (testing for any difference)\n   - Left-tailed
+    (testing for decrease/worse performance)  \n   - Right-tailed (testing for increase/better
+    performance)\n\nUse appropriate statistical notation (μ for mean, p for proportion,
+    σ² for variance) and ensure each hypothesis clearly explains what business question
+    it answers. Ground your formulation in the knowledge base documentation you've
+    consulted."
+  expected_output: "A comprehensive set of hypotheses including:\n- H₀: Null hypothesis
+    in mathematical notation and plain English\n- H₁_two_tailed: Two-tailed alternative
+    with notation and business interpretation\n- H₁_left_tailed: Left-tailed alternative
+    with notation and business interpretation  \n- H₁_right_tailed: Right-tailed alternative
+    with notation and business interpretation\n- Each hypothesis should include the
+    business question it addresses"
+  agent: hypothesis_generator
+  context:
+  - extract_context_and_variables
+recommend_statistical_test:
+  description: "Based on the extracted context and variables for \"{business_problem}\",
+    recommend the most appropriate statistical test. **First, read statistical decision
+    tree documentation and test selection guides using your File Read Tool to ground
+    your recommendations in established methodology.**\n\nConsult files such as:\n-
+    Statistical test decision trees and flowcharts\n- Test selection guidelines and
+    best practices  \n- Examples of successful test choices for similar problems\n-
+    Company standards for statistical methodology\n\nUse the following decision criteria:\n1.
+    Number of groups (2 vs >2)\n2. Relationship between groups (independent vs paired/dependent)
+    \ \n3. Data type of the metric (continuous, categorical, binary)\n4. Sample size
+    considerations\n5. Distribution assumptions\n\nProvide a primary recommendation
+    and at least one alternative test if applicable. Include clear justification for
+    the primary recommendation referencing the decision criteria used and supporting
+    evidence from the documentation you've consulted."
+  expected_output: |-
+    Statistical test recommendations including:
+    - primary_test: The main recommended statistical test
+    - primary_justification: Clear explanation of why this test is recommended
+    - alternative_tests: List of alternative tests if applicable
+    - assumptions: Key assumptions that should be verified
+    - sample_size_considerations: Guidelines for adequate sample size
+  agent: test_recommender
+  context:
+  - extract_context_and_variables
+validate_statistical_consistency:
+  description: "Perform a comprehensive peer review of all statistical analysis components
+    for \"{business_problem}\" to ensure logical consistency and methodological soundness.
+    Validate that:\n\n1. **Hypothesis-Test Alignment**: Alternative hypotheses (two-tailed,
+    left-tailed, right-tailed) are consistent with the recommended statistical test\n2.
+    **Notation Accuracy**: Mathematical notation matches the identified metric type
+    and experimental design  \n3. **Methodological Soundness**: The recommended test
+    is appropriate for the data type, sample size, and independence assumptions\n4.
+    **Context Consistency**: All components align with the extracted experimental
+    design and business context\n5. **Completeness Check**: All required elements
+    are present and properly formatted\n\nIf inconsistencies are found, provide specific
+    feedback on what needs to be corrected and why."
+  expected_output: "A validation report containing:\n- validation_status: \"APPROVED\"
+    or \"REQUIRES_CORRECTION\"  \n- consistency_checks: Detailed results for each
+    validation criterion\n- identified_issues: List of any problems found with specific
+    explanations\n- recommendations: Specific suggestions for corrections if needed\n-
+    confidence_score: Overall confidence rating (1-10) in the analysis setup"
+  agent: statistical_validator
+  context:
+  - extract_context_and_variables
+  - generate_statistical_hypotheses
+  - recommend_statistical_test
+review_and_format_output:
+  description: |-
+    Review and synthesize all outputs including validation results from the statistical consistency check for "{business_problem}". Incorporate any validation feedback and ensure the final output meets the highest standards. Format the final output into a structured JSON object that follows the defined schema and create a clean, human-readable markdown summary.
+
+    If validation identified issues, either incorporate the corrections or clearly flag them for user attention. Ensure that:
+    1. All validation feedback has been addressed or documented
+    2. Hypotheses are properly aligned with identified variables and validation results
+    3. Statistical notation is correct and consistent per validation checks
+    4. Test recommendations match the experimental design and passed validation
+    5. Output is clear, actionable, and includes validation confidence metrics
+    6. All required fields are present and properly formatted
+  expected_output: "A comprehensive final output containing:\n- validation_summary:
+    Summary of the validation process and any issues resolved\n- summary: Executive
+    summary of the analysis setup\n- context: Extracted variables and experimental
+    design details  \n- hypotheses: Complete set of null and alternative hypotheses
+    (validated)\n- test_recommendation: Primary and alternative statistical tests
+    with justification (validated)\n- confidence_metrics: Validation confidence score
+    and quality indicators\n- next_steps: Recommended actions for the data scientist\nPlus
+    a clean markdown-formatted summary ready for documentation"
+  agent: reviewer
+  context:
+  - extract_context_and_variables
+  - generate_statistical_hypotheses
+  - recommend_statistical_test
+  - validate_statistical_consistency
+store_generated_hypothesis:
+  description: |-
+    Store the validated and approved hypothesis formulation for "{business_problem}" in the centralized hypothesis library with appropriate metadata and tags for future searchability and reuse.
+
+    Create a structured entry containing:
+    1. **Business Context**: Problem description, industry, and use case
+    2. **Statistical Components**: Groups, metrics, data types, experimental design
+    3. **Hypothesis Details**: Complete H₀ and H₁ formulations with notation
+    4. **Test Recommendations**: Primary and alternative statistical tests
+    5. **Validation Results**: Quality scores and peer review outcomes
+    6. **Metadata Tags**: Industry, metric type, statistical approach, complexity level
+    7. **Search Keywords**: Terms that would help future users discover this hypothesis
+
+    Generate a unique identifier and timestamp for version control and tracking.
+  expected_output: |-
+    A structured library entry with:
+    - unique_id: Generated identifier for this hypothesis
+    - timestamp: Creation date and time
+    - business_problem_summary: Concise problem description
+    - tags: List of searchable tags (industry, metric_type, test_type, etc.)
+    - full_hypothesis_record: Complete validated hypothesis formulation
+    - reuse_guidance: Notes on when this formulation might be applicable to future problems
+    - storage_confirmation: Confirmation that entry was successfully stored
+  agent: hypothesis_librarian
+  context:
+  - review_and_format_output
+refine_hypothesis_based_on_feedback:
+  description: |-
+    Perform targeted refinements to the hypothesis formulation for "{business_problem}" based on specific user feedback or validation concerns. This is an iterative improvement process that allows surgical modifications without starting from scratch.
+
+    **Refinement Types:**
+    1. **Wording Adjustments**: Clarify language, improve precision, or fix terminology
+    2. **Statistical Modifications**: Adjust test parameters, significance levels, or effect sizes
+    3. **Scope Changes**: Narrow or broaden the hypothesis scope based on data availability
+    4. **Group Redefinition**: Modify comparison groups or population segments
+    5. **Metric Adjustments**: Change primary/secondary metrics or measurement approaches
+
+    **Input Requirements:**
+    - Original hypothesis formulation (from context)
+    - Specific feedback or concerns to address
+    - Desired modifications or improvements
+    - Validation results that triggered this refinement
+
+    **Process:**
+    1. Analyze the current hypothesis against the feedback
+    2. Identify specific components that need modification
+    3. Apply targeted changes while preserving the core statistical integrity
+    4. Ensure modifications maintain logical consistency
+    5. Provide clear explanation of what changed and why
+  expected_output: |-
+    A refined hypothesis package containing:
+    - **Original vs Refined Comparison**: Side-by-side view showing what changed
+    - **Updated H₀ and H₁**: Complete refined statistical hypotheses
+    - **Modification Summary**: Bullet points explaining each change made
+    - **Impact Assessment**: How refinements affect the statistical approach
+    - **Test Adjustments**: Any needed changes to recommended statistical tests
+    - **Rationale**: Clear reasoning for each modification
+    - **Next Steps**: Recommendations for validation or further refinement if needed
+  agent: hypothesis_refiner
+  context:
+  - review_and_format_output
+  - store_generated_hypothesis

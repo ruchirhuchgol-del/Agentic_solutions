@@ -1,0 +1,37 @@
+
+
+site_name: Hypothesis Generation Agent (HGA) Docs
+site_description: Documentation for the HGA project.
+repo_url: https://github.com/your-org/hypothesis-generation-agent
+
+nav:
+  - Home: index.md
+  - User Guide:
+    - Getting Started: user_guide/getting_started.md
+    - How to Formulate a Problem: user_guide/formulating_problems.md
+  - Developer Guide:
+    - Architecture: developer_guide/architecture.md
+    - Contributing: developer_guide/contributing.md
+  - API Reference:
+    - Agents: api/agents.md
+    - Tasks: api/tasks.md
+    - Tools: api/tools.md
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: blue
+  features:
+    - navigation.tabs
+
+plugins:
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
